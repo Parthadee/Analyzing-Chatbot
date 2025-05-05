@@ -1,5 +1,5 @@
 # 💬 Analyzing Chatbot
-
+<img src="https://github.com/Parthadee/Analyzing-Chatbot/blob/bf10b1af43bf14059183926d3260cede457ad04d/Analysis_chatBot.png"/>
 
 ## 📌 Overview
 This is a simple, web-based **Business Analyst Chatbot** built using Python and Flask. It can answer a limited set of **predefined financial queries** using hardcoded responses. Ideal for learning and demonstrating basic chatbot development.
