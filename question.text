@@ -1,0 +1,26 @@
+# 📊 Financial Analysis Chatbot (Prototype)
+
+## 💡 Description
+This is a **basic web-based chatbot prototype** built using Python and Flask. It is designed to respond to a limited set of **predefined financial queries** with hardcoded responses based on analyzed financial data. It serves as a learning tool and a foundational model for building more advanced financial assistants.
+
+---
+
+## 🤖 Supported Queries
+The chatbot can currently answer the following financial/business questions:
+1. **What is the total revenue?**
+2. **How has net income changed over the last year?**
+3. **What are the operating expenses?**
+4. **What is the profit margin?**
+5. **What is the earnings per share?**
+
+Each query is matched exactly and responded to with a static, pre-written response derived from your sample data.
+
+---
+
+## 🚫 Limitations
+- ❌ Only responds to **predefined queries**.
+- ❌ **No live data** or dynamic analysis.
+- ❌ Does not use **Natural Language Processing (NLP)** or Machine Learning (ML).
+- ❌ Not connected to a **database or file upload system**.
+
+---

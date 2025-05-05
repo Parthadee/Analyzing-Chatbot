@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Business Analyst Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #dfe9f3, #ffffff);
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        .chat-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 700px;
+            transition: all 0.3s ease-in-out;
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #2b2e4a;
+            text-align: center;
+            font-size: 28px;
+        }
+        label {
+            font-weight: 600;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #1f78ff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056cc;
+        }
+        .conversation-history {
+            margin-top: 20px;
+            background: #f9fbff;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .message {
+            margin-bottom: 12px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .user {
+            font-weight: 600;
+            color: #1f78ff;
+        }
+        .bot {
+            font-weight: 600;
+            color: #2e2e2e;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box">
+            <h2>Business Analyst Chatbot</h2>
+            <form method="POST">
+                <label for="query">Ask a financial or business question:</label>
+                <input type="text" name="query" id="query" placeholder="e.g., What is the revenue growth?" required>
+                <input type="submit" value="Ask">
+            </form>
+
+            {% if conversation %}
+            <div class="conversation-history">
+                {% for pair in conversation %}
+                <div class="message">
+                    <p><span class="user">You:</span> {{ pair['user'] }}</p>
+                    <p><span class="bot">Bot:</span> {{ pair['bot'] }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
