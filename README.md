@@ -1,4 +1,5 @@
-# 💬 Analyzing Chatbot (Prototype)
+# 💬 Analyzing Chatbot
+
 
 ## 📌 Overview
 This is a simple, web-based **Business Analyst Chatbot** built using Python and Flask. It can answer a limited set of **predefined financial queries** using hardcoded responses. Ideal for learning and demonstrating basic chatbot development.
@@ -67,3 +68,17 @@ python app.py
 http://127.0.0.1:5000
 ```
 ---
+## 🛠️ Installation
+Clone the repository:
+```bash
+https://github.com/Parthadee/Analyzing-Chatbot.git
+cd Analyzing-Chatbot
+```
+---
+
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+
